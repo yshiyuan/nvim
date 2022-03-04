@@ -1,4 +1,4 @@
-" auto-install vim-plug                                                                                                                
+" auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -8,7 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'vim-airline/vim-airline'       
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -16,12 +16,22 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'lifepillar/vim-solarized8'
 
+Plug 'luochen1990/rainbow'
+
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+
+Plug 'morhetz/gruvbox'
+
 call plug#end()
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set expandtab
+set tabstop=4
+set smarttab
+set smartindent
+set softtabstop=0
+set shiftwidth=4
+
+set noshowmode
 
 set number
 
@@ -30,12 +40,14 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
-autocmd vimenter * ++nested colorscheme solarized8_high
+"autocmd vimenter * ++nested colorscheme solarized8_high
+autocmd vimenter * ++nested colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 
 map <Esc><Esc> :w<CR>
 
 let mapleader=";"
- 
+
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " toggle line numbers
@@ -203,10 +215,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " --vim-airline begin--
 let g:airline#extensions#tabline#enabled = 1   " 是否打开tabline
-let g:airline_theme = "solarized"
+let g:airline_theme = 'lighthaus'
+"let g:airline_solarized_bg='dark'
+"let g:airline_theme = 'solarized'
+"nice theme: ayu_dark selenized_bw badwolf night_owl google_dark kolor lighthaus molokai
 let g:airline#extensions#tabline#formatter = "unique_tail"
 " Note: You must define the dictionary first before setting values.
-" Also, it's a good idea to check whether it exists as to avoid 
+" Also, it's a good idea to check whether it exists as to avoid
 " accidentally overwriting its contents.
 
 let g:airline_powerline_fonts = 1
@@ -303,9 +318,43 @@ let g:nvim_tree_icons = {
 
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>f :NvimTreeFindFile<CR>
+nnoremap <leader>tf :NvimTreeFindFile<CR>
 " NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 " --nvim-tree end--
+
+" --rainbow start--
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\	'guis': [''],
+\	'cterms': [''],
+\	'operators': '_,_',
+\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\	'separately': {
+\		'*': {},
+\		'markdown': {
+\			'parentheses_options': 'containedin=markdownCode contained',
+\		},
+\		'lisp': {
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\		},
+\		'haskell': {
+\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'],
+\		},
+\		'vim': {
+\			'parentheses_options': 'containedin=vimFuncBody',
+\		},
+\		'perl': {
+\			'syn_name_prefix': 'perlBlockFoldRainbow',
+\		},
+\		'stylus': {
+\			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup'],
+\		},
+\		'css': 0,
+\	}
+\}
+" --rainbow end--
