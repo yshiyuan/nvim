@@ -9,3 +9,4 @@ data
 nvim-py
 .neoconf.json
 lazy-lock.json
+.luarc.json
