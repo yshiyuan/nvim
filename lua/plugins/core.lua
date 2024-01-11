@@ -82,5 +82,15 @@ return {
     keys = {
         { "<leader>dq", function() require("dap").close() end, desc = "Close Session" },
     }
+  },
+
+  {
+
+    "hrsh7th/nvim-cmp",
+    opts = {
+      mapping = require("cmp").mapping.preset.insert({
+          ["<C-g>"] = require("cmp").mapping.complete(),
+      })
+    },
   }
 }
