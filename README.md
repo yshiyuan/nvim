@@ -12,3 +12,18 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 | 手动触发 cmp 补全              | ctrl + g       | 原本为 ctrl + space，现在改为 ctrl + g |
 | 退出 cmp 补全                  | ctrl + e       |                                        |
 | 在 terminal 中进入 normal 模式 | ctrl + [ + [   |                                        |
+
+## 安装步骤
+
+1. clone 本仓库
+1. 设置 clipboard, 参考<https://askubuntu.com/a/1486875>
+   - x11 安装 xclip
+   - Wayland 安装 wl-clipboard
+
+1. 使用 nvm 安装 node, 参考 <https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script>
+1. 安装 luarocks, 源码安装或者包管理器安装
+1. 安装 ripgrep, fd, lazygit, fzf
+1. npm 安装 tree-sitter-cli `npm install -g tree-sitter-cli`
+1. python 环境设置
+   1. 创建 venv 环境, 在 $HOME/.config/nvim/ 下执行 `python -m venv nvim-py`
+   1. 进入 venv 环境, 执行 `python3 -m pip install --upgrade pynvim`

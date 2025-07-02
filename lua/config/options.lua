@@ -9,4 +9,4 @@ vim.bo.softtabstop = 4 -- number of spaces a <Tab> counts for. When 0, feature i
 local current_path = vim.fn.getcwd()
 vim.g.python3_host_prog = current_path .. "/nvim-py/bin/python"
 
-vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard:append({ "unnamed", "unnamedplus" })

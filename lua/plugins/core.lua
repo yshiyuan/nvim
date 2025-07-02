@@ -84,13 +84,13 @@ return {
     }
   },
 
-  {
+  -- {
 
-    "hrsh7th/nvim-cmp",
-    opts = {
-      mapping = require("cmp").mapping.preset.insert({
-          ["<C-g>"] = require("cmp").mapping.complete(),
-      })
-    },
-  }
+  --   "hrsh7th/nvim-cmp",
+  --   opts = {
+  --     mapping = require("cmp").mapping.preset.insert({
+  --         ["<C-g>"] = require("cmp").mapping.complete(),
+  --     })
+  --   },
+  -- }
 }
