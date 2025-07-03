@@ -25,5 +25,6 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 1. 安装 ripgrep, fd, lazygit, fzf
 1. npm 安装 tree-sitter-cli `npm install -g tree-sitter-cli`
 1. python 环境设置
+   1. 使用 pyenv 管理 python 版本（可选）
    1. 创建 venv 环境, 在 $HOME/.config/nvim/ 下执行 `python -m venv nvim-py`
    1. 进入 venv 环境, 执行 `python3 -m pip install --upgrade pynvim`
