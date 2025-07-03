@@ -19,15 +19,14 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 1. 设置 clipboard, 参考<https://askubuntu.com/a/1486875>
    - x11 安装 xclip
    - Wayland 安装 wl-clipboard
-
-1. 使用 nvm 安装 node, 参考 <https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script>
 1. 安装 luarocks, 源码安装或者包管理器安装
    - 推荐源码安装，参考 <https://github.com/luarocks/luarocks/blob/main/docs/installation_instructions_for_unix.md#quick-start>
    - lua 安装 5.1 版本
    - 可将 lua 和 luarocks 都安装在 $HOME/.local 路径下。
-     - lua 需要修改 Makefile 中的 INSTALL_TOP 路径。
-     - luarocks 需要指定 --with-lua-include=$HOME/.local/include 和 --prefix=$HOME/.local
+     - lua 需要执行 `make install INSTALL_TOP=$HOME/.local` 。
+     - luarocks 需要configure指定 --with-lua-include=$HOME/.local/include 和 --prefix=$HOME/.local
 1. 安装 ripgrep, fd, lazygit, fzf
+1. 使用 nvm 安装 node, 参考 <https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script>
 1. npm 安装 tree-sitter-cli `npm install -g tree-sitter-cli`
 1. python 环境设置
    1. 使用 pyenv 管理 python 版本（可选）
