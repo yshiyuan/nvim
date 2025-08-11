@@ -16,6 +16,10 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 | fzf-lua 在预览浮动窗口中翻页       | ctrl + f/b     |                                      |
 | fzf-lua 在候选项间上下移动         | ctrl + j/k     |                                      |
 
+## nvim 下载
+
+最新版本 nvim 可能因 glibc 版本无法在旧的 linux 发行版运行，可以在此仓库下载 <https://github.com/neovim/neovim-releases>
+
 ## 安装步骤
 
 1. clone 本仓库
