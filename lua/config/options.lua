@@ -7,6 +7,6 @@ vim.bo.expandtab = true -- always uses spaces instead of tab characters (et).
 vim.bo.softtabstop = 4 -- number of spaces a <Tab> counts for. When 0, feature is off (sts).
 
 local current_path = vim.fn.getcwd()
-vim.g.python3_host_prog = current_path .. "/nvim-py/bin/python"
+vim.g.python3_host_prog = current_path .. "/venv/bin/python"
 
 vim.opt.clipboard:append("unnamedplus")
