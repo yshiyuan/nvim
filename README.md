@@ -16,6 +16,7 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 | 进入浮动窗口                       | 按两下 K 或 shfit + k | 退出浮动窗口按 q                     |
 | fzf-lua 在预览浮动窗口中翻页       | ctrl + f/b            |                                      |
 | fzf-lua 在候选项间上下移动         | ctrl + j/k            |                                      |
+| mini.files 创建和删除文件          | o 创建，dd 删除       | 创建和删除后，需要按 = 同步一下操作  |
 
 ## nvim 下载
 
