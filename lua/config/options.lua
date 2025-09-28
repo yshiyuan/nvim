@@ -10,3 +10,6 @@ local current_path = vim.fn.getcwd()
 vim.g.python3_host_prog = current_path .. "/venv/bin/python"
 
 vim.opt.clipboard:append("unnamedplus")
+
+-- neovide config
+vim.g.neovide_fullscreen = true
