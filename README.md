@@ -4,21 +4,22 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
 
 ## 常用操作
 
-| 操作                               | 快捷键                     | 备注                                 |
-| ---------------------------------- | -------------------------- | ------------------------------------ |
-| 在 buffer 间切换                   | shfit + h/l                |                                      |
-| 在窗口间切换                       | ctrl + h/j/k/l             |                                      |
-| 在 telescope 预览窗口翻页          | ctrl + d/u                 | 在 telescope 窗口使用 ? 键可打开帮助 |
-| 手动触发 cmp 补全                  | ctrl + space               |                                      |
-| 退出 cmp 补全                      | ctrl + e                   |                                      |
-| 在 terminal 中进入 normal 模式     | ctrl + [ + [ 或 <C-\><C-n> |                                      |
-| 在浮动窗口中显示引用单词的额外信息 | K 或 shfit + k             |                                      |
-| 进入浮动窗口                       | 按两下 K 或 shfit + k      | 退出浮动窗口按 q                     |
-| fzf-lua 在预览浮动窗口中翻页       | ctrl + f/b                 |                                      |
-| fzf-lua 在候选项间上下移动         | ctrl + j/k                 |                                      |
-| mini.files 创建和删除文件          | o 创建，dd 删除            | 创建和删除后，需要按 = 同步一下操作  |
-| 将选择窗口固定到 Quickfix          | ctrl + q                   |                                      |
-| 将选择窗口固定到 Trouble           | alt + t                    |                                      |
+| 操作                                       | 快捷键                     | 备注                                 |
+| ------------------------------------------ | -------------------------- | ------------------------------------ |
+| 在 buffer 间切换                           | shfit + h/l                |                                      |
+| 在窗口间切换                               | ctrl + h/j/k/l             |                                      |
+| 在 telescope 预览窗口翻页                  | ctrl + d/u                 | 在 telescope 窗口使用 ? 键可打开帮助 |
+| 手动触发 cmp 补全                          | ctrl + space               |                                      |
+| 退出 cmp 补全                              | ctrl + e                   |                                      |
+| 在 terminal 中进入 normal 模式             | ctrl + [ + [ 或 <C-\><C-n> |                                      |
+| 在浮动窗口中显示引用单词的额外信息         | K 或 shfit + k             |                                      |
+| 进入浮动窗口                               | 按两下 K 或 shfit + k      | 退出浮动窗口按 q                     |
+| fzf-lua/snacks-picker 在预览浮动窗口中翻页 | ctrl + f/b                 |                                      |
+| fzf-lua/snacks-picker 在候选项间上下移动   | ctrl + j/k                 |                                      |
+| snacks-picker focus the preview window     | <a-w>                      |
+| mini.files 创建和删除文件                  | o 创建，dd 删除            | 创建和删除后，需要按 = 同步一下操作  |
+| 将选择窗口固定到 Quickfix                  | ctrl + q                   |                                      |
+| 将选择窗口固定到 Trouble                   | alt + t                    |                                      |
 
 ## nvim 下载
 
