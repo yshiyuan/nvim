@@ -11,5 +11,7 @@ vim.g.python3_host_prog = current_path .. "/venv/bin/python"
 
 vim.opt.clipboard:append("unnamedplus")
 
+vim.g.autoformat = false
+
 -- neovide config
 vim.g.neovide_fullscreen = true
