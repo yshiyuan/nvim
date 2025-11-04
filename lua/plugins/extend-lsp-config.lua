@@ -12,7 +12,7 @@ return {
 						"--clang-tidy",
 						"--completion-style=detailed",
 						"--function-arg-placeholders",
-						"--header-insertion=iwyu",
+						"--header-insertion=never",
 						"--limit-references=0",
 						"--limit-results=0",
 						"-j=8",
