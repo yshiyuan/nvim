@@ -9,5 +9,4 @@ data
 venv
 .neoconf.json
 lazy-lock.json
-lazyvim.json
 .luarc.json
