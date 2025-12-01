@@ -6,6 +6,7 @@ return {
 				clangd = {
 					cmd = {
 						"clangd",
+            "--compile-commands-dir=./",
 						"--all-scopes-completion",
 						"--background-index",
 						"--background-index-priority=normal",
