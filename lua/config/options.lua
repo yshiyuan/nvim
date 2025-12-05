@@ -13,5 +13,11 @@ vim.opt.clipboard:append("unnamedplus")
 
 vim.g.autoformat = false
 
+vim.o.exrc = true        -- 允许加载本地 .nvim.lua / .exrc
+vim.o.secure = true      -- 禁止在本地文件中执行不安全命令（建议开启）
+
 -- neovide config
-vim.g.neovide_fullscreen = true
+if vim.g.neovide then
+	vim.opt.title = true
+	vim.opt.titlestring = vim.fs.basename(vim.fn.getcwd())
+end

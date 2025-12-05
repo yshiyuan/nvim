@@ -44,3 +44,26 @@ A custom starter for [LazyVim](https://github.com/LazyVim/LazyVim).
    1. 使用 pyenv 管理 python 版本（可选）
    1. 创建 venv 环境, 在 $HOME/.config/nvim/ 下执行 `python -m venv nvim-py`
    1. 进入 venv 环境, 执行 `python3 -m pip install --upgrade pynvim`
+
+## 项目级配置
+
+目前支持在项目根目录下添加 .nvim.lua 以支持项目级别的配置
+
+需注意 .nvim.lua 中配置的优先级较低，init.lua < .nvim.lua < ftplugin < after/ftplugin
+
+因此修改空格缩进需要按照以下方式修改
+
+```lua
+local project_augroup = vim.api.nvim_create_augroup("ProjectSettings", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+        group = project_augroup,
+        pattern = "lua",
+        callback = function()
+                vim.bo.tabstop = 4
+                vim.bo.shiftwidth = 4
+                vim.bo.softtabstop = 4
+                vim.bo.expandtab = true
+        end,
+        desc = "Project Lua indent settings",
+})
+```
