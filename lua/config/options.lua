@@ -9,7 +9,7 @@ vim.o.softtabstop = 4 -- number of spaces a <Tab> counts for. When 0, feature is
 local current_path = vim.fn.getcwd()
 vim.g.python3_host_prog = current_path .. "/venv/bin/python"
 
-vim.opt.clipboard:append("unnamedplus")
+-- vim.opt.clipboard:append("unnamedplus")
 
 vim.g.autoformat = false
 
@@ -20,4 +20,5 @@ vim.o.secure = true      -- 禁止在本地文件中执行不安全命令（建�
 if vim.g.neovide then
 	vim.opt.title = true
 	vim.opt.titlestring = vim.fs.basename(vim.fn.getcwd())
+  vim.o.guifont = "Maple Mono Normal NL CN,Hack Nerd Font Mono,Noto Color Emoji:h12"
 end
